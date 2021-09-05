@@ -2,6 +2,14 @@
 
 Spring Boot back-end application for Passport Photo Formatter app. An app inspired by using Photoshop one too many times to modify photos for passports.
 
+This app uses facial recognition to autodetect faces to crop to.
+
+# Web Version
+
+[Heroku Deployed](https://formatter-passport.herokuapp.com/)
+
+(initializing may take a few seconds, but subsequent uploads will not)
+
 # Technologies
 
 - Java 16+
@@ -10,7 +18,7 @@ Spring Boot back-end application for Passport Photo Formatter app. An app inspir
 
 - Apache Commons (1.3.2) (Commons file upload 1.2.1)
 
-- OpenCV (4.5.2)
+- OpenCV (4.0.0)
 
 
 # Launch (in companionship of front-end display)
@@ -21,9 +29,9 @@ React (front-end) part of this project can be found [HERE](https://github.com/so
 
 - OpenCV official installation guide can be found [here](https://opencv-java-tutorials.readthedocs.io/en/latest/01-installing-opencv-for-java.html)
 
-Initiate Java application at 'PassportAppApplication.java'
+Run Spring Boot application with `mvn spring-boot:run` at root
 
-Initiate React application ([Passport-Photo-Formatter-React](https://github.com/sophieqguan/passport-photo-formatter-React)) with `npm start`
+Run React application ([Passport-Photo-Formatter-React](https://github.com/sophieqguan/passport-photo-formatter-React)) with `npm start` at root
 
 
 # Features
@@ -31,6 +39,8 @@ Initiate React application ([Passport-Photo-Formatter-React](https://github.com/
 ## Image Resizing
 
 - resize (scale and crop) a user-uploaded image to fit standard 2 inch x 2 inch US passport photo size.
+
+- place resized image on grid for printing
 
 - using OpenCV for facial recognition to automatically resize image with face as center (if no face is detected, the program will crop with center of image as center).
 
