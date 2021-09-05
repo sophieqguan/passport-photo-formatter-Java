@@ -6,7 +6,7 @@ This app uses facial recognition to autodetect faces to crop to.
 
 # Web Version
 
-[Heroku Deployed](https://formatter-passport.herokuapp.com/)
+[![Heroku](https://www.herokucdn.com/deploy/button.svg)](https://formatter-passport.herokuapp.com/)
 
 (initializing may take a few seconds, but subsequent uploads will not)
 
