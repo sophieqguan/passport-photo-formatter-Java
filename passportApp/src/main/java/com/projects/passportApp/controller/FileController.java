@@ -85,6 +85,8 @@ public class FileController {
      * @param output - output File object
      * @throws IOException
      */
+	private static int OFFSETY = 100;
+  	private static int OFFSETX = 30;
     public void resizeImage(File input, String path, File output) throws IOException {
     	// recognize face
         FileInputStream inputStream = new FileInputStream(input);	
@@ -94,8 +96,8 @@ public class FileController {
 		
 		// if detected face (execute facial recognition resizing)
 		if (face != null) {
-			float faceW = face.width;
-			float faceH = face.height;
+			float faceW = face.width + OFFSETX;
+      		float faceH = face.height + OFFSETY;
 			float scale = (faceW > faceH) ? SCALETO / faceW : SCALETO / faceH;
 			
 			// resize and grid user-uploaded image

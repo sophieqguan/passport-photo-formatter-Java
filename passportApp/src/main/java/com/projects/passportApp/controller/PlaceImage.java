@@ -49,8 +49,8 @@ public class PlaceImage {
 		return result;
 	}
 	
-	private static int HEADSZ = 420; // unit = px
-	private static int OFFSET = -20; 
+	 private static int HEADSZ = 190; // unit = px
+ 	 private static int OFFSET = 40;
 	/**
 	 * resize image into 600 x 600 px (using facial recognition)
 	 * 
@@ -66,32 +66,33 @@ public class PlaceImage {
 		int w = orig.getWidth(); // in pixels
 		int h = orig.getHeight(); // in pixels
 		if (w != HEADSZ || h != HEADSZ) {
-			
-			//scale image so face fit 420 x 420 px
-			int newH = (int) (h * scale);
-			int newW = (int) (w * scale);
-			scaled = ImageUtilities.scaleImage(orig, newW, newH);			
 
-			if (newH <= IMGPX && newW <= IMGPX) 	
-				return scaled;
-			
-			//find surrounding white space from face
-			double maxTop = (face.y) * scale;
-			double maxLeft = (face.x) * scale;
-			
-			double padTop = (int) ((IMGPX - HEADSZ) / 2), padLeft = padTop;  
-			
-			// if exceeds max height
-			padTop = Math.min(padTop, maxTop);
-			padLeft = Math.min(padLeft, maxLeft);
-			
-			// crop image
-			int x = (int) ((face.x) * scale - padLeft) - OFFSET;
-			int y = (int) ((face.y) * scale - padTop) - OFFSET;
-			result = ImageUtilities.cropImageByPoint(scaled, x, y, IMGPX, IMGPX);
-		}
-		else result = orig;	
-		
+		// scale image so face fit 420 x 420 px
+		int newH = (int) (h * scale);
+		int newW = (int) (w * scale);
+		scaled = ImageUtilities.scaleImage(orig, newW, newH);
+
+		if (newH <= IMGPX && newW <= IMGPX)
+			return scaled;
+
+		// find surrounding white space from face
+		double maxTop = (face.y) * scale;
+		double maxLeft = (face.x) * scale;
+
+		double padTop = (int) ((IMGPX - (HEADSZ)) / 2);
+		double padLeft = (int) ((IMGPX - (HEADSZ)) / 3);
+
+		// if exceeds max height
+		padTop = Math.min(padTop, maxTop / 2);
+		padLeft = Math.min(padLeft, maxLeft / 2);
+
+		// crop image
+		int x = (int) ((face.x) * scale - padLeft);
+		int y = (int) ((face.y) * scale - padTop) - OFFSET;
+		result = ImageUtilities.cropImageByPoint(scaled, x, y, IMGPX, IMGPX);
+		} else
+		result = orig;
+
 		return result;
 	}
 	
