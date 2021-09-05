@@ -1,4 +1,4 @@
-# Passport Photo Formatter (Java)
+# Passport Photo Formatter (Java API)
 
 Spring Boot back-end application for Passport Photo Formatter app. An app inspired by using Photoshop one too many times to modify photos for passports.
 
@@ -9,6 +9,8 @@ This app uses facial recognition to autodetect faces to crop to.
 [![Heroku](https://www.herokucdn.com/deploy/button.svg)](https://formatter-passport.herokuapp.com/)
 
 (initializing may take a few seconds, but subsequent uploads will not)
+
+for demo, please go to [display](https://github.com/sophieqguan/passport-photo-formatter-React).
 
 # Technologies
 
