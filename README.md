@@ -2,6 +2,10 @@
 
 Spring Boot back-end application for Passport Photo Formatter app. An app inspired by using Photoshop one too many times to modify photos for passports.
 
+Formats a user-upload portrait image into standard 2" x 2" US passport photo size at 300 dpi. User can download formatted and gridded image for printing. Grid image is 4" x 6" at 300dpi. 
+
+(This project is part of the Passport Photo Formatter application. It hosts the API.)
+
 This app uses facial recognition to autodetect faces to crop to.
 
 # Web Version
