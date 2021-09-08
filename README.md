@@ -1,5 +1,7 @@
 # Passport Photo Formatter (Java API)
 
+[![Heroku](https://pyheroku-badge.herokuapp.com/?app=formatter-passport&style=flat)](https://formatter-passport.herokuapp.com/)
+
 Spring Boot back-end application for Passport Photo Formatter app. An app inspired by using Photoshop one too many times to modify photos for passports.
 
 Formats a user-upload portrait image into standard 2" x 2" US passport photo size at 300 dpi. User can download formatted and gridded image for printing. Grid image is 4" x 6" at 300dpi. 
@@ -10,7 +12,7 @@ This app uses facial recognition to autodetect faces to crop to.
 
 # Web Version
 
-[![Heroku](https://www.herokucdn.com/deploy/button.svg)](https://formatter-passport.herokuapp.com/)
+[![Heroku](https://pyheroku-badge.herokuapp.com/?app=formatter-passport&style=flat)](https://formatter-passport.herokuapp.com/)
 
 (initializing may take a few seconds, but subsequent uploads will not)
 
